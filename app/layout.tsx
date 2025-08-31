@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import { Navbar, Footer } from "@/components";
 
 export const metadata: Metadata = {
   title: "Travel App",
@@ -17,6 +17,7 @@ export default function RootLayout({
       <body className="relative overflow-hidden">
         <Navbar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
