@@ -6,7 +6,7 @@ import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
   return (
-    <nav className="border-2 z-50 flexBetween max-container padding-container relative py-5">
+    <nav className="z-50 flexBetween max-container padding-container relative py-5">
       <Link href="/">
         <Image src="/hilink-logo.svg" alt="logo" width={74} height={29} />
       </Link>
