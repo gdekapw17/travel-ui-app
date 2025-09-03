@@ -19,7 +19,7 @@ function Campsite({
 }: CampsiteProps) {
   return (
     <div
-      className={`h-full w-full min-w-[1100px] ${backgroundImage} bg-cover bg-no-repeat lg:rounded-5xl`}
+      className={`h-full w-full min-w-full lg:min-w-[1100px] ${backgroundImage} bg-cover bg-no-repeat lg:rounded-5xl`}
     >
       <div className="flex flex-col h-full items-start justify-between p-6 lg:px-20 lg:py-10">
         <div className="flexCenter gap-4">
@@ -84,11 +84,7 @@ export default function CampsiteContainer() {
   return (
     <div
       ref={scrollRef}
-      className="
-            overflow-x-auto hide-scrollbar
-            cursor-grab active:cursor-grabbing scroll-smooth
-            flex h-[340px] w-full gap-8 lg:h-[400px] xl:h-[600px]
-          "
+      className="overflow-x-auto hide-scrollbar cursor-grab active:cursor-grabbing scroll-smooth flex h-[340px] w-full gap-0 lg:gap-8 lg:h-[400px] xl:h-[600px] overflow-hidden"
       onMouseDown={handleMouseDown}
     >
       <Campsite
