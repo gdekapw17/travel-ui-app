@@ -84,7 +84,7 @@ export default function CampsiteContainer() {
   return (
     <div
       ref={scrollRef}
-      className="overflow-x-auto hide-scrollbar cursor-grab active:cursor-grabbing scroll-smooth flex h-[340px] w-full gap-0 lg:gap-8 lg:h-[400px] xl:h-[600px] overflow-hidden"
+      className="overflow-x-auto hide-scrollbar cursor-grab active:cursor-grabbing scroll-smooth flex h-[340px] w-full gap-0 lg:gap-8 lg:h-[400px] xl:h-[600px]"
       onMouseDown={handleMouseDown}
     >
       <Campsite
