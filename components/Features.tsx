@@ -10,18 +10,22 @@ type FeatureItemType = {
 
 function FeatureItem({ title, icon, variant, description }: FeatureItemType) {
   return (
-    <li className="w-full flex flex-1 flex-col items-start gap-5">
+    <li className="w-full flex flex-1 flex-col items-start">
       <div className={`rounded-full p-4 lg:p-7 bg-${variant}-50`}>
         <Image src={icon} alt="icon" width={28} height={28} />
       </div>
+      <h3 className="bold-20 lg:bold-32 mt-5 capitalize">{title}</h3>
+      <p className="regular-16 mt-5 lg:mt-[30px] bg-white text-gray-30 lg:bg-none">
+        {description}
+      </p>
     </li>
   );
 }
 
 export default function Features() {
   return (
-    <section className="bg-feature-bg bg-center flexCenter py-24 bg-no-repeat flex-col">
-      <div className="max-container padding-container relative justify-end w-full">
+    <section className="bg-feature-bg bg-no-repeat bg-center flexCenter py-24 flex-col">
+      <div className="max-container padding-container relative flex w-full">
         <div className="lg:min-h-[900px] flex flex-1">
           <Image
             src="/phone.png"
@@ -43,7 +47,7 @@ export default function Features() {
             />
             <h2 className="bold-40 lg:bold-64">Our Feature</h2>
           </div>
-          <ul>
+          <ul className="mt-10 gap-10 grid md:grid-cols-2">
             {FEATURES.map((feature) => (
               <FeatureItem
                 title={feature.title}
